@@ -160,7 +160,7 @@ $('#progress-bar').slideUp();
 
 $('.water-ripple').ripples({
 	resolution: 256,
-	perturbance: 0.02,
+	perturbance: 0.01,
 	dropRadius: 20,
 });
 

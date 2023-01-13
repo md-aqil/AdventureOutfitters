@@ -1,13 +1,4 @@
-@charset "UTF-8";
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Lato;
-}
 
-:root {
-  --theme-color: rgb(68, 237, 188);
-}
 
 .title {
   font-weight: bold;
@@ -394,9 +385,22 @@ body {
   flex-grow: 1;
   margin: 5px auto;
 }
+.navbar {
+	background: rgba(255, 255, 255, 0.521) !important;
+        backdrop-filter: saturate(180%) blur(20px);
+        border-radius: 8px;
+        margin-top: 10px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+}
+
 
 .bg-transprent .navbar-nav .nav-link {
-  color: #fff !important;
+  color: var(--text-dark) !important;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .frem-text .btn {
@@ -412,7 +416,45 @@ body {
   height: 100vh;
   background-image: url(../img/travel-img/beach.jpg);
   background-size: cover;
+  overflow: hidden;
 }
+.hero-front-banner:after {
+  content: "";
+  background-image: url(../img/travel-img/train.jpg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  animation-name: example;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example{
+  0%{
+    background-image: url(../img/travel-img/shutterstock_1045107625.jpg);
+    transform: scale(1.1);
+  }
+  25%{
+    background-image: url(../img/travel-img/beach.jpg);
+    transform: scale(.8);
+  }
+  50%{
+    background-image: url(../img/travel-img/india.jpg);
+    transform: scale(1.1);
+  }
+  75%{
+    background-image: url(../img/travel-img/woman-holding-hand.jpg);
+    transform: scale(.8);
+  }
+  100%{
+    background-image: url(../img/travel-img/treck.jpg);
+    transform: scale(1.1);
+  }
+}
+
 .hero-front-banner:before {
   content: "";
   position: absolute;
@@ -420,8 +462,17 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(142deg, #00000059, #5e0ca752);
+  background-image: linear-gradient(142deg, #00000059, #2a014f8c);
 }
+
+/* .water-ripple {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+} */
 
 .content-container {
   width: 100%;
@@ -815,7 +866,7 @@ body {
 
 .text {
   color: #8f8f8f;
-  line-height: 1.8;
+  line-height: 1.2;
 }
 
 ul.amenities {
